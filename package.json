@@ -35,7 +35,8 @@
     "changelog": "gulp changelog",
     "version": "yarn changelog && git add CHANGELOG.md",
     "release": "yarn test && yarn build && np --no-cleanup --yolo --any-branch",
-    "markdown": "api-documenter markdown -i ./temp -o ./markdown"
+    "markdown": "api-documenter markdown -i ./temp -o ./markdown",
+    "cp": "version='v1.0.0' && mkdir -p ./docs-website/docs/${version} && rm -rf ./docs-website/docs/${version}/** && cp -rf ./markdown/** ./docs-website/docs/${version}"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.12.16",
